@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenneth Cueto — University student and aspiring data scientist. Projects in AI, computer vision, data analytics and software development.">
+    <meta name="theme-color" content="#07050A">
+    <title>Kenneth Cueto — Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -50 100 100'%3E%3Cg stroke='%23C8203F' stroke-width='3' fill='%2307050A'%3E%3Cpath d='M0-4C14-14 18-34 0-47C-18-34-14-14 0-4Z' transform='rotate(45)'/%3E%3Cpath d='M0-4C14-14 18-34 0-47C-18-34-14-14 0-4Z' transform='rotate(135)'/%3E%3Cpath d='M0-4C14-14 18-34 0-47C-18-34-14-14 0-4Z' transform='rotate(225)'/%3E%3Cpath d='M0-4C14-14 18-34 0-47C-18-34-14-14 0-4Z' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='9' fill='%23C8203F'/%3E%3Ccircle r='4' fill='%23FF8FB8'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ═══════════ Shared SVG: the Evernight flower ═══════════ -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="evPetalGrad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0" stop-color="#2a0a14"/>
+                <stop offset=".45" stop-color="#07050A"/>
+                <stop offset="1" stop-color="#1c0710"/>
+            </linearGradient>
+            <radialGradient id="evCore">
+                <stop offset="0" stop-color="#FFC1D6"/>
+                <stop offset=".45" stop-color="#FF8FB8"/>
+                <stop offset="1" stop-color="#A3142F"/>
+            </radialGradient>
+            <radialGradient id="jfBell" cx="50%" cy="30%" r="70%">
+                <stop offset="0" stop-color="#FFC1D6" stop-opacity=".55"/>
+                <stop offset=".45" stop-color="#C8203F" stop-opacity=".32"/>
+                <stop offset="1" stop-color="#4A0815" stop-opacity=".12"/>
+            </radialGradient>
+            <path id="evPetalPath" d="M0 -4 C 14 -14, 18 -34, 0 -47 C -18 -34, -14 -14, 0 -4 Z"/>
+            <path id="evSepalPath" d="M0 -6 C 4 -12, 3 -20, 0 -25 C -3 -20, -4 -12, 0 -6 Z"/>
+            <g id="evPetal">
+                <use href="#evPetalPath" fill="url(#evPetalGrad)" stroke="#C8203F" stroke-width="1.6"/>
+                <path d="M0 -9 C 1 -20, 1 -32, 0 -41" stroke="#6E0B1E" stroke-width=".9" fill="none"/>
+                <path d="M0 -18 L 6 -26 M0 -24 L -6 -32" stroke="#4A0815" stroke-width=".7" fill="none"/>
+            </g>
+        </defs>
+        <symbol id="ev-flower" viewBox="-50 -50 100 100">
+            <g fill="#A3142F">
+                <use href="#evSepalPath"/><use href="#evSepalPath" transform="rotate(90)"/>
+                <use href="#evSepalPath" transform="rotate(180)"/><use href="#evSepalPath" transform="rotate(270)"/>
+            </g>
+            <use href="#evPetal" transform="rotate(45)"/><use href="#evPetal" transform="rotate(135)"/>
+            <use href="#evPetal" transform="rotate(225)"/><use href="#evPetal" transform="rotate(315)"/>
+            <circle r="8.5" fill="url(#evCore)"/>
+            <g fill="#FFC1D6"><circle cx="0" cy="-4" r="1.3"/><circle cx="3.8" cy="-1.2" r="1.3"/><circle cx="2.4" cy="3.2" r="1.3"/><circle cx="-2.4" cy="3.2" r="1.3"/><circle cx="-3.8" cy="-1.2" r="1.3"/></g>
+        </symbol>
+        <symbol id="ev-flower-line" viewBox="-50 -50 100 100">
+            <g fill="none" stroke="currentColor" stroke-width=".8">
+                <use href="#evPetalPath" transform="rotate(45)"/><use href="#evPetalPath" transform="rotate(135)"/>
+                <use href="#evPetalPath" transform="rotate(225)"/><use href="#evPetalPath" transform="rotate(315)"/>
+                <circle r="8.5"/>
+            </g>
+        </symbol>
+        <!-- Evey-style jellyfish (fallback when WebGL is unavailable) -->
+        <symbol id="ev-jelly" viewBox="-50 -42 100 182">
+            <g class="ej-tent" fill="none" stroke-linecap="round">
+                <path d="M-30 14 C -36 50, -22 80, -32 120 S -26 150, -30 170" stroke="#C8203F" stroke-width="1.2" opacity=".7"/>
+                <path d="M30 14 C 36 50, 22 80, 32 120 S 26 150, 30 170" stroke="#C8203F" stroke-width="1.2" opacity=".7"/>
+                <path d="M-14 16 C -20 54, -6 84, -16 124 S -10 150, -12 160" stroke="#A3142F" stroke-width="1" opacity=".7"/>
+                <path d="M14 16 C 20 54, 6 84, 16 124 S 10 150, 12 160" stroke="#A3142F" stroke-width="1" opacity=".7"/>
+                <path d="M-5 12 C -10 40, 4 64, -6 96 S 0 116, -4 128" stroke="#FF8FB8" stroke-width="2.6" opacity=".5"/>
+                <path d="M5 12 C 10 40, -4 64, 6 96 S 0 116, 4 128" stroke="#FF8FB8" stroke-width="2.6" opacity=".5"/>
+            </g>
+            <path d="M-38 4 C -42 -36, 42 -36, 38 4 C 36 14, 30 20, 24 26 C 20 17, 14 12, 8 12 C 6 20, 2 27, 0 32 C -2 27, -6 20, -8 12 C -14 12, -20 17, -24 26 C -30 20, -36 14, -38 4 Z" fill="url(#jfBell)" stroke="#FF8FB8" stroke-width="1.1"/>
+            <path d="M0 -24 C 1 -10, 1 0, 0 30 M-20 -18 C -18 -4, -12 6, -8 12 M20 -18 C 18 -4, 12 6, 8 12" stroke="#4A0815" stroke-width="1" fill="none" opacity=".75"/>
+            <use href="#ev-flower" x="-9" y="-21" width="18" height="18"/>
+        </symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ═══════════ Loader ═══════════ -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <svg class="loader-flower" viewBox="-50 -50 100 100">
+            <g class="lf-sepals" fill="#A3142F">
+                <use href="#evSepalPath"/><use href="#evSepalPath" transform="rotate(90)"/>
+                <use href="#evSepalPath" transform="rotate(180)"/><use href="#evSepalPath" transform="rotate(270)"/>
+            </g>
+            <g class="lf-petal" style="--r:45deg;--d:0s"><use href="#evPetal"/></g>
+            <g class="lf-petal" style="--r:135deg;--d:.12s"><use href="#evPetal"/></g>
+            <g class="lf-petal" style="--r:225deg;--d:.24s"><use href="#evPetal"/></g>
+            <g class="lf-petal" style="--r:315deg;--d:.36s"><use href="#evPetal"/></g>
+            <circle class="lf-core" r="8.5" fill="url(#evCore)"/>
+        </svg>
+        <p class="loader-name">Kenneth Cueto</p>
+    </div>
+
+    <!-- Ambient layers -->
+    <div class="nebula" aria-hidden="true"><i class="neb-a"></i><i class="neb-b"></i></div>
+    <canvas id="nightSky" class="night-sky" aria-hidden="true"></canvas>
+    <canvas id="jellyLayer" class="jelly-layer" aria-hidden="true"></canvas>
+    <div class="jelly-fallback" id="jellyFallback" aria-hidden="true">
+        <svg class="jfb jfb1" viewBox="-50 -42 100 182"><use href="#ev-jelly"/></svg>
+        <svg class="jfb jfb2" viewBox="-50 -42 100 182"><use href="#ev-jelly"/></svg>
+        <svg class="jfb jfb3" viewBox="-50 -42 100 182"><use href="#ev-jelly"/></svg>
+        <svg class="jfb jfb4" viewBox="-50 -42 100 182"><use href="#ev-jelly"/></svg>
+        <svg class="jfb jfb5" viewBox="-50 -42 100 182"><use href="#ev-jelly"/></svg>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <div class="cur-dot" id="curDot" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ev-flower"/></svg></div>
+    <div class="cur-ring" id="curRing" aria-hidden="true"><span>View</span></div>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <header class="navbar" id="navbar">
+        <a href="#hero" class="brand" aria-label="Kenneth Cueto — back to top">
+            <span class="brand-mark">
+                <svg class="brand-ring" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle class="ring-track" cx="24" cy="24" r="21"/>
+                    <circle class="ring-fill" id="ringFill" cx="24" cy="24" r="21" pathLength="100"/>
+                </svg>
+                <svg class="logo-flower" id="logoFlower" viewBox="0 0 100 100" aria-hidden="true"><use href="#ev-flower"/></svg>
+            </span>
+            <span class="brand-text"><b>Kenneth Cueto</b><small>Data · AI · Dev</small></span>
+            <span class="nav-chapter" id="navChapter" aria-hidden="true"></span>
+        </a>
+        <nav class="nav-links" aria-label="Primary" id="navLinks">
+            <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+            <a href="#hero" class="nav-link active"><i>I</i><span class="roll"><span data-t="Home">Home</span></span></a>
+            <a href="#about" class="nav-link"><i>II</i><span class="roll"><span data-t="About">About</span></span></a>
+            <a href="#skills" class="nav-link"><i>III</i><span class="roll"><span data-t="Skills">Skills</span></span></a>
+            <a href="#projects" class="nav-link"><i>IV</i><span class="roll"><span data-t="Projects">Projects</span></span></a>
+            <a href="#achievements" class="nav-link"><i>V</i><span class="roll"><span data-t="Credentials">Credentials</span></span></a>
+            <a href="#contact" class="nav-link"><i>VI</i><span class="roll"><span data-t="Contact">Contact</span></span></a>
+        </nav>
+        <div class="nav-actions">
+            <button class="nav-icon" id="navTerminal" aria-label="Open terminal" title="Terminal (Ctrl + `)">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </button>
+            <a href="#contact" class="nav-cta"><span>Let's talk</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <nav class="chapter-rail" id="chapterRail" aria-label="Chapters"></nav>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+        <div class="mn-links">
+            <a href="#hero"><i>I</i>Home</a>
+            <a href="#about"><i>II</i>About</a>
+            <a href="#skills"><i>III</i>Skills</a>
+            <a href="#projects"><i>IV</i>Projects</a>
+            <a href="#achievements"><i>V</i>Credentials</a>
+            <a href="#contact"><i>VI</i>Contact</a>
+        </div>
+        <div class="mn-foot">
+            <a href="mailto:cuetokenneth31@gmail.com" class="mn-mail">cuetokenneth31@gmail.com</a>
+            <a href="#contact" class="btn btn-primary"><span>Let's talk</span></a>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- ═══════════ HERO ═══════════ -->
+        <section id="hero" class="hero">
+            <div class="hero-stage" id="heroStage">
+                <canvas id="heroCanvas" aria-label="A shattered pane of memoria suspended in the air. Hover the shards to read memories, click to scatter them, double-click or hold to make them whole again."></canvas>
+                <div class="hero-fallback" id="heroFallback" aria-hidden="true">
+                    <svg class="shard-svg" viewBox="-150 -170 300 340">
+                        <defs>
+                            <linearGradient id="shardGrad" gradientUnits="userSpaceOnUse" x1="0" y1="-150" x2="0" y2="150">
+                                <stop offset="0" stop-color="#FF8FB8" stop-opacity=".34"/>
+                                <stop offset=".5" stop-color="#C8203F" stop-opacity=".2"/>
+                                <stop offset="1" stop-color="#2a0a14" stop-opacity=".16"/>
+                            </linearGradient>
+                            <radialGradient id="riftGlow">
+                                <stop offset="0" stop-color="#fff4f7" stop-opacity=".95"/>
+                                <stop offset=".15" stop-color="#FFC1D6" stop-opacity=".7"/>
+                                <stop offset=".5" stop-color="#C8203F" stop-opacity=".22"/>
+                                <stop offset="1" stop-color="#C8203F" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <circle r="70" fill="url(#riftGlow)"/>
+                        <g class="rift-cracks" fill="none" stroke="#FFC1D6" stroke-width=".8" stroke-linecap="round" opacity=".8"><path d="M0 0 L6.6 3.0 L13.5 4.8 L20.3 7.2 L27.3 7.7 L34.3 8.6 L41.1 10.6 L48.0 12.3"/><path d="M0 0 L6.1 4.5 L11.6 10.1 L16.5 16.5 L21.0 23.4 L26.7 28.7 L32.5 33.8 L38.6 38.2"/><path d="M0 0 L4.1 7.3 L7.4 15.2 L10.0 23.6 L13.5 31.5 L18.2 38.1 L22.2 45.5 L26.9 52.1"/><path d="M0 0 L3.4 7.9 L6.8 15.7 L8.7 24.4 L11.4 32.7 L15.4 40.1 L18.3 48.3 L21.8 56.1"/><path d="M0 0 L-2.5 8.4 L-4.3 17.1 L-5.6 26.0 L-6.0 34.9 L-7.6 43.7 L-10.0 52.1 L-13.6 59.9"/><path d="M0 0 L-4.5 6.9 L-9.4 13.3 L-13.3 20.8 L-17.7 27.9 L-22.2 34.8 L-26.2 42.2 L-30.9 48.8"/><path d="M0 0 L-4.6 6.8 L-10.3 12.1 L-15.6 18.0 L-20.6 24.3 L-26.4 29.4 L-31.6 35.4 L-36.1 42.3"/><path d="M0 0 L-6.8 2.3 L-13.8 2.3 L-20.6 4.5 L-27.3 7.3 L-34.2 9.1 L-40.9 11.6 L-47.8 13.4"/><path d="M0 0 L-6.9 1.7 L-13.9 2.3 L-20.9 2.8 L-27.8 4.4 L-34.8 4.1 L-41.7 5.8 L-48.7 6.5"/><path d="M0 0 L-5.9 -4.9 L-11.7 -9.9 L-16.8 -16.1 L-20.9 -23.4 L-24.9 -30.8 L-27.4 -39.2 L-29.2 -47.9"/><path d="M0 0 L-5.1 -6.1 L-10.7 -11.6 L-16.2 -17.1 L-22.4 -21.4 L-29.0 -24.6 L-35.1 -28.9 L-41.8 -31.8"/><path d="M0 0 L-3.1 -8.1 L-5.2 -16.7 L-6.8 -25.4 L-8.7 -34.1 L-11.9 -42.1 L-15.8 -49.6 L-18.2 -58.1"/><path d="M0 0 L1.4 -8.8 L3.6 -17.4 L4.5 -26.3 L6.3 -35.0 L9.5 -43.0 L13.1 -50.7 L15.4 -59.2"/><path d="M0 0 L3.1 -8.1 L4.7 -16.9 L6.0 -25.7 L8.7 -34.0 L10.8 -42.6 L13.8 -50.7 L15.3 -59.5"/><path d="M0 0 L5.2 -6.1 L10.4 -12.1 L16.3 -17.0 L21.6 -22.9 L27.1 -28.4 L31.6 -35.3 L35.8 -42.6"/><path d="M0 0 L6.7 -2.8 L13.5 -4.8 L20.1 -8.0 L26.3 -12.1 L33.1 -14.2 L40.1 -15.7 L47.0 -17.4"/></g>
+                        <g fill="url(#shardGrad)" stroke="#FF8FB8" stroke-width=".8" stroke-linejoin="round">
+                            <polygon class="sf" style="--d:0s" opacity="1.00" points="-1.7,12.5 -1.8,7.3 -7.1,4.2 -10.6,5.0 -11.8,9.7 -10.4,14.2 -4.1,14.5" transform="rotate(-6 -6.8 9.7)"/>
+                            <polygon class="sf" style="--d:0.6s" opacity="0.93" points="21.7,-7.3 14.6,-2.2 14.7,3.2 24.0,6.0 28.8,2.6" transform="rotate(5 21.1 0.1)"/>
+                            <polygon class="sf" style="--d:1.2s" opacity="0.93" points="9.0,-29.9 4.3,-18.6 9.8,-15.3 17.0,-20.4 17.5,-31.8" transform="rotate(3 11.6 -23.6)"/>
+                            <polygon class="sf" style="--d:1.7999999999999998s" opacity="0.93" points="-13.7,-26.0 -6.9,-19.6 -3.2,-20.5 1.5,-31.8 -6.8,-33.6" transform="rotate(1 -5.8 -27.0)"/>
+                            <polygon class="sf" style="--d:2.4s" opacity="0.92" points="-14.3,-5.7 -13.1,-10.6 -20.0,-17.0 -30.6,-15.6 -24.4,-5.6" transform="rotate(-1 -21.3 -11.1)"/>
+                            <polygon class="sf" style="--d:3s" opacity="0.93" points="-12.8,11.3 -14.2,6.7 -24.2,6.8 -23.5,14.9 -16.6,16.5" transform="rotate(-3 -18.7 11.0)"/>
+                            <polygon class="sf" style="--d:3.5999999999999996s" opacity="0.93" points="3.4,30.8 1.3,20.6 -5.2,20.3 -9.0,25.5 -5.1,34.7" transform="rotate(-5 -2.7 26.9)"/>
+                            <polygon class="sf" style="--d:0s" opacity="0.93" points="20.2,17.8 10.9,14.9 8.4,17.0 10.5,27.2 17.1,28.1" transform="rotate(6 14.0 21.4)"/>
+                            <polygon class="sf" style="--d:0.6s" opacity="0.86" points="16.5,-25.7 15.9,-25.0 15.3,-13.2 22.7,-3.0 30.0,-2.7 36.9,-14.4 27.1,-26.7" transform="rotate(4 25.1 -15.0)"/>
+                            <polygon class="sf" style="--d:1.2s" opacity="0.84" points="-14.2,-47.3 -7.9,-33.5 0.8,-31.6 9.7,-33.6 10.4,-34.3 -0.3,-58.0" transform="rotate(2 -2.0 -42.9)"/>
+                            <polygon class="sf" style="--d:1.7999999999999998s" opacity="0.85" points="-34.5,-23.0 -29.2,-21.2 -18.1,-22.6 -10.9,-30.6 -17.1,-44.3 -26.5,-43.7 -36.0,-25.3" transform="rotate(0 -23.1 -31.9)"/>
+                            <polygon class="sf" style="--d:2.4s" opacity="0.86" points="-24.1,10.2 -24.8,1.7 -31.2,-8.6 -36.4,-10.4 -41.2,9.8 -32.9,16.0" transform="rotate(-2 -32.6 3.7)"/>
+                            <polygon class="sf" style="--d:3s" opacity="0.86" points="-14.5,42.6 -10.2,31.8 -14.3,22.2 -21.6,20.6 -30.4,26.4 -27.4,39.7" transform="rotate(-4 -20.2 31.5)"/>
+                            <polygon class="sf" style="--d:3.5999999999999996s" opacity="0.85" points="16.7,40.6 9.2,31.0 2.3,30.0 -6.5,34.1 -10.9,45.0 -4.7,53.3 16.5,41.6" transform="rotate(-6 1.8 40.7)"/>
+                            <polygon class="sf" style="--d:0s" opacity="0.86" points="34.2,22.3 29.1,10.5 21.7,10.2 16.8,13.8 13.5,24.5 20.9,34.0" transform="rotate(5 23.4 20.9)"/>
+                            <polygon class="sf" style="--d:0.6s" opacity="0.77" points="44.4,21.2 44.4,-5.2 44.2,-8.4 30.1,-7.9 22.9,4.3 28.2,16.7" transform="rotate(3 35.4 5.5)"/>
+                            <polygon class="sf" style="--d:1.2s" opacity="0.75" points="42.6,-15.8 42.3,-21.4 40.5,-30.2 37.7,-38.6 33.7,-46.6 31.0,-50.6 18.0,-28.4 28.4,-15.3" transform="rotate(1 31.3 -29.7)"/>
+                            <polygon class="sf" style="--d:1.7999999999999998s" opacity="0.74" points="30.9,-55.2 28.6,-58.6 22.7,-65.3 15.9,-71.2 8.5,-76.2 3.0,-78.9 -4.9,-56.7 6.4,-31.8 17.7,-32.8" transform="rotate(-1 11.7 -54.4)"/>
+                            <polygon class="sf" style="--d:2.4s" opacity="0.69" points="3.3,-80.0 0.6,-81.3 -8.1,-84.3 -17.1,-86.1 -26.3,-86.7 -31.5,-86.3 -38.3,-56.2 -30.1,-45.0 -19.9,-45.6 -4.8,-57.1" transform="rotate(-3 -19.2 -67.1)"/>
+                            <polygon class="sf" style="--d:3s" opacity="0.74" points="-51.4,-25.4 -37.4,-22.3 -27.3,-41.8 -35.2,-52.8 -59.4,-48.1" transform="rotate(-5 -43.0 -38.5)"/>
+                            <polygon class="sf" style="--d:3.5999999999999996s" opacity="0.76" points="-40.5,8.2 -35.5,-13.3 -37.2,-15.7 -51.0,-18.7 -71.9,-2.5 -52.0,12.1" transform="rotate(6 -51.1 -3.7)"/>
+                            <polygon class="sf" style="--d:0s" opacity="0.77" points="-28.8,35.9 -32.0,22.0 -40.7,15.5 -52.1,19.4 -54.0,38.6 -39.5,43.1" transform="rotate(4 -42.0 29.7)"/>
+                            <polygon class="sf" style="--d:0.6s" opacity="0.72" points="-9.1,59.0 -9.3,52.0 -16.0,43.2 -30.0,40.0 -40.9,47.4 -36.9,76.3 -27.4,81.6" transform="rotate(2 -26.1 58.7)"/>
+                            <polygon class="sf" style="--d:1.2s" opacity="0.74" points="22.4,54.0 11.9,39.8 -10.7,52.2 -10.4,59.1 22.2,74.9" transform="rotate(0 8.4 56.8)"/>
+                            <polygon class="sf" style="--d:1.7999999999999998s" opacity="0.75" points="43.0,36.1 43.0,27.4 26.6,22.8 12.6,35.2 12.4,36.3 22.8,50.4" transform="rotate(-2 28.1 35.3)"/>
+                            <polygon class="sf" style="--d:2.4s" opacity="0.62" points="-29.4,-85.7 -33.6,-85.4 -43.1,-83.5 -52.2,-80.4 -60.9,-76.2 -68.9,-70.8 -76.2,-64.4 -79.2,-61.0 -62.6,-49.1 -36.5,-54.1" transform="rotate(-4 -51.6 -66.3)"/>
+                            <polygon class="sf" style="--d:3s" opacity="0.62" points="-75.2,-58.0 -78.5,-54.2 -83.9,-46.1 -88.2,-37.5 -91.3,-28.3 -93.2,-18.8 -93.8,-9.2 -93.8,-2.3 -72.5,-4.0 -49.9,-21.6 -58.6,-46.1" transform="rotate(-6 -73.7 -27.4)"/>
+                            <polygon class="sf" style="--d:3.5999999999999996s" opacity="0.62" points="-52.9,36.8 -50.8,15.8 -72.4,-0.1 -93.6,1.6 -93.6,41.9 -75.5,48.3" transform="rotate(5 -74.5 23.6)"/>
+                            <polygon class="sf" style="--d:0s" opacity="0.63" points="-36.0,75.3 -40.3,44.7 -56.1,39.8 -78.5,51.2 -62.6,76.4" transform="rotate(3 -54.9 58.9)"/>
+                            <polygon class="sf" style="--d:0.6s" opacity="0.57" points="-17.4,133.7 -10.9,133.7 20.0,77.3 19.0,75.5 -17.0,58.2 -37.0,82.9" transform="rotate(1 -10.5 92.1)"/>
+                            <polygon class="sf" style="--d:1.2s" opacity="0.65" points="37.0,75.6 37.0,36.8 15.5,51.9 15.3,73.9 16.2,75.7" transform="rotate(-1 27.1 59.7)"/>
+                            <polygon class="sf" style="--d:1.7999999999999998s" opacity="0.48" points="-73.4,100.5 -62.5,78.3 -80.1,50.4 -99.9,43.3 -99.9,101.7" transform="rotate(-3 -85.0 75.6)"/>
+                            <polygon class="sf" style="--d:2.4s" opacity="0.47" points="-61.3,137.3 -11.6,137.3 -32.6,83.0 -43.8,76.8 -73.3,78.0 -84.2,100.3" transform="rotate(-5 -49.1 108.3)"/>
+                            <polygon class="sf" style="--d:3s" opacity="0.46" points="-23.5,137.7 33.3,137.7 33.3,76.9 9.9,76.9" transform="rotate(6 12.1 111.5)"/>
+                            <polygon class="sf" style="--d:3.5999999999999996s" opacity="0.35" points="-111.5,144.1 -56.7,144.1 -82.0,103.3 -111.5,104.6" transform="rotate(4 -89.7 126.0)"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="memory-tip" id="memoryTip" role="status" aria-live="polite"></div>
+                <p class="hero-hint" id="heroHint">hover the shards · click to scatter · hold to remember</p>
+            </div>
+            <div class="hero-content">
+                <p class="hero-eyebrow"><svg class="mini-flower" viewBox="0 0 100 100" aria-hidden="true"><use href="#ev-flower"/></svg> Hello, I'm</p>
+                <h1 class="hero-title" id="heroTitle"><span class="w">Kenneth</span> <span class="w accent">Cueto</span></h1>
+                <p class="hero-role"><span class="typed" id="typed"></span><span class="caret" aria-hidden="true">|</span></p>
+                <p class="hero-script">Even the longest night keeps its stars.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary magnetic"><span>View My Work</span></a>
+                    <a href="#contact" class="btn btn-ghost magnetic"><span>Get In Touch</span></a>
+                </div>
+                <ul class="hero-stats" id="heroStats" aria-label="Portfolio at a glance"></ul>
+            </div>
+            <a href="#about" class="scroll-cue" aria-label="Scroll to About"><span></span>Scroll</a>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" id="marqueeTrack"></div>
+        </div>
+
+        <!-- ═══════════ ABOUT ═══════════ -->
+        <section id="about" class="section">
+            <div class="container">
+                <header class="section-head" data-num="II" data-animate>
+                    <span class="chapter">Get to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                </header>
+                <div class="about-grid">
+                    <div class="medallion-wrap" data-animate>
+                        <div class="medallion" id="medallion">
+                            <div class="md-layer md-ring1"></div>
+                            <div class="md-layer md-ring2"></div>
+                            <svg class="md-layer md-flower" viewBox="0 0 100 100" aria-hidden="true"><use href="#ev-flower"/></svg>
+                            <div class="md-layer md-initials">KC</div>
+                            <div class="md-layer md-orbit"><i></i><i></i><i></i></div>
+                        </div>
+                    </div>
+                    <div class="about-text" data-animate>
+                        <p class="lead">I'm an undergraduate student pursuing a Bachelor's degree in Industrial Technology, Major in Computer Technology. My passion lies at the intersection of technology and data — I'm building my path toward a career in Data Science, where I can leverage analytical thinking and AI-driven tools to solve real-world problems.</p>
+                        <p>Through professional certifications, hands-on projects, and continuous self-learning, I'm developing a strong foundation in data analytics, machine learning, and software development — turning raw data into meaningful insights and impactful solutions.</p>
+                        <div class="about-facts">
+                            <div><span class="fact-k">Focus</span><span class="fact-v">Data Science · AI · Computer Vision</span></div>
+                            <div><span class="fact-k">Degree</span><span class="fact-v">BIT — Computer Technology</span></div>
+                            <div><span class="fact-k">Building</span><span class="fact-v">Local-first AI &amp; analytics tools</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ SKILLS ═══════════ -->
+        <section id="skills" class="section section-band">
+            <div class="container">
+                <header class="section-head" data-num="III" data-animate>
+                    <span class="chapter">What I do</span>
+                    <h2 class="section-title">Skills &amp; Expertise</h2>
+                </header>
+                <div class="skills-layout">
+                    <div class="skills-side">
+                        <div class="skills-legend" data-animate>
+                            <span><i class="chip-dot strong"></i>Proficient</span>
+                            <span><i class="chip-dot familiar"></i>Familiar</span>
+                            <span class="legend-tip">Select a card to bring it to the front of the sphere</span>
+                        </div>
+                        <div class="skill-bento">
+                            <article class="skill-card" data-cat="frontend" tabindex="0" role="button" aria-pressed="false" data-animate>
+                                <header><span class="sk-icon"><svg viewBox="0 0 24 24"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg></span><div><h3>Frontend</h3><p>Building responsive, accessible interfaces</p></div></header>
+                                <div class="sk-meter"></div>
+                                <div class="chips"><span class="chip strong">HTML5</span><span class="chip strong">CSS3</span><span class="chip strong">JavaScript</span><span class="chip">React</span><span class="chip">Tailwind CSS</span><span class="chip">Responsive Design</span></div>
+                            </article>
+                            <article class="skill-card" data-cat="backend" tabindex="0" role="button" aria-pressed="false" data-animate>
+                                <header><span class="sk-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span><div><h3>Backend &amp; Data</h3><p>APIs, data pipelines, and server logic</p></div></header>
+                                <div class="sk-meter"></div>
+                                <div class="chips"><span class="chip strong">Python</span><span class="chip strong">Flask</span><span class="chip strong">SQL</span><span class="chip strong">Pandas</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">MongoDB</span></div>
+                            </article>
+                            <article class="skill-card" data-cat="ai" tabindex="0" role="button" aria-pressed="false" data-animate>
+                                <header><span class="sk-icon"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><div><h3>AI &amp; Machine Learning</h3><p>Local LLMs, computer vision, deep learning</p></div></header>
+                                <div class="sk-meter"></div>
+                                <div class="chips"><span class="chip strong">OpenCV</span><span class="chip strong">Ollama</span><span class="chip strong">LangChain</span><span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">MediaPipe</span><span class="chip">Scikit-learn</span></div>
+                            </article>
+                            <article class="skill-card" data-cat="analytics" tabindex="0" role="button" aria-pressed="false" data-animate>
+                                <header><span class="sk-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="20"/><rect x="5" y="11" width="3" height="7" rx=".5"/><rect x="10.5" y="6" width="3" height="12" rx=".5"/><rect x="16" y="9" width="3" height="9" rx=".5"/></svg></span><div><h3>Data Analytics</h3><p>Visualization, dashboards, and insights</p></div></header>
+                                <div class="sk-meter"></div>
+                                <div class="chips"><span class="chip strong">Excel</span><span class="chip strong">Spreadsheets</span><span class="chip">Tableau</span><span class="chip">R</span><span class="chip">Matplotlib</span><span class="chip">Streamlit</span></div>
+                            </article>
+                            <article class="skill-card" data-cat="tools" tabindex="0" role="button" aria-pressed="false" data-animate>
+                                <header><span class="sk-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="8" r="2.5"/><path d="M6 8.5v7M18 10.5c0 4-6 3-11 6"/></svg></span><div><h3>Tools &amp; Workflow</h3><p>Version control, deployment, and dev tools</p></div></header>
+                                <div class="sk-meter"></div>
+                                <div class="chips"><span class="chip strong">Git</span><span class="chip strong">GitHub</span><span class="chip strong">VS Code</span><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Figma</span></div>
+                            </article>
+                            <article class="skill-card" data-cat="mobile" tabindex="0" role="button" aria-pressed="false" data-animate>
+                                <header><span class="sk-icon"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/></svg></span><div><h3>Mobile &amp; Hardware</h3><p>Cross-platform apps and embedded IoT</p></div></header>
+                                <div class="sk-meter"></div>
+                                <div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">ESP32</span><span class="chip">Arduino C++</span><span class="chip">Firebase</span></div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="sphere-wrap" data-animate>
+                        <div class="tag-sphere" id="tagSphere" role="img" aria-label="Interactive sphere of skills"></div>
+                        <p class="sphere-caption" id="sphereCaption" aria-live="polite"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROJECTS (full-section constellation) ═══════════ -->
+        <section id="projects" class="section projects-section">
+            <div class="sky-layer" id="skyLayer">
+                <canvas id="skyCanvas" aria-label="Constellation of projects. Each star is a project; the grid of cards below lists the same projects."></canvas>
+            </div>
+            <div class="sky-tip" id="skyTip" role="status"></div>
+            <div class="container">
+                <header class="section-head" data-num="IV" data-animate>
+                    <span class="chapter">What I've built</span>
+                    <h2 class="section-title">Projects Constellation</h2>
+                    <p class="section-sub">Fifteen projects across coursework, curiosity and long-term passion, each one a star in this sky. Open any card or star for an interactive case file.</p>
+                </header>
+
+                <div class="observatory" id="observatory" data-animate>
+                    <div class="filter-bar" role="tablist" aria-label="Project categories" id="filterBar">
+                        <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All <span class="count"></span></button>
+                        <button class="filter-btn" role="tab" aria-selected="false" data-filter="academic">Academic <span class="count"></span></button>
+                        <button class="filter-btn" role="tab" aria-selected="false" data-filter="casual">Casual <span class="count"></span></button>
+                        <button class="filter-btn" role="tab" aria-selected="false" data-filter="longterm">Long-Term <span class="count"></span></button>
+                    </div>
+                    <span class="obs-divider" aria-hidden="true"></span>
+                    <div class="view-switch" role="group" aria-label="Project view" id="viewSwitch">
+                        <span class="vs-thumb" id="vsThumb" aria-hidden="true"></span>
+                        <button class="vs-btn active" data-view="grid" aria-pressed="true">
+                            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Cards</button>
+                        <button class="vs-btn" data-view="sky" aria-pressed="false">
+                            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/></svg>Constellation</button>
+                    </div>
+                    <span class="obs-count" id="obsCount"></span>
+                </div>
+
+                <div class="sky-stage" id="skyStage" hidden>
+                    <div class="sky-legend">
+                        <span><i style="background:#FF8FB8;color:#FF8FB8"></i>Long-Term · inner orbit</span>
+                        <span><i style="background:#C8203F;color:#C8203F"></i>Academic · middle orbit</span>
+                        <span><i style="background:#E9DDE2;color:#E9DDE2"></i>Casual · outer orbit</span>
+                        <span class="sky-help">drag to orbit · scroll to zoom · click a star</span>
+                    </div>
+                </div>
+
+                <div class="project-views" id="gridView">
+                    <div class="project-group" data-group="longterm">
+                        <h3 class="group-title"><span>Long-Term</span><small>Ongoing passion projects · inner orbit</small></h3>
+                        <div class="feature-grid" id="grid-longterm"></div>
+                    </div>
+                    <div class="project-group" data-group="academic">
+                        <h3 class="group-title"><span>Academic</span><small>Coursework, capstones &amp; thesis · middle orbit</small></h3>
+                        <div class="project-grid" id="grid-academic"></div>
+                    </div>
+                    <div class="project-group" data-group="casual">
+                        <h3 class="group-title"><span>Casual</span><small>Experiments driven by curiosity · outer orbit</small></h3>
+                        <div class="project-grid" id="grid-casual"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ ACHIEVEMENTS ═══════════ -->
+        <section id="achievements" class="section section-band">
+            <div class="container">
+                <header class="section-head" data-num="V" data-animate>
+                    <span class="chapter">My credentials</span>
+                    <h2 class="section-title">Achievements &amp; Certifications</h2>
+                </header>
+                <div class="cert-viewer" data-animate>
+                    <div class="cert-info cert-info-left">
+                        <span class="cert-info-label">Certificate Type</span>
+                        <h3 class="cert-type-text" id="certType">Professional Certificate</h3>
+                        <span class="cert-counter" id="certCounter">01 / 05</span>
+                    </div>
+
+                    <div class="cert-center">
+                        <div class="coverflow" id="certScroll">
+                            <div class="cert-slide active" data-type="Professional Certificate" data-provider="Coursera by Google" data-link="https://coursera.org/verify/professional-cert/VKX3MZF9XGZ4" data-name="Google Data Analytics" data-badge-png="google-data-analytics-professional-certificate.2.png">
+                                <span class="cert-badge">Professional</span>
+                                <img src="static/img/certificates/Professional1.png" alt="Google Data Analytics Professional Certificate" loading="lazy">
+                            </div>
+                            <div class="cert-slide" data-type="Professional Certificate" data-provider="Coursera by IBM" data-link="https://coursera.org/verify/professional-cert/QRH7Y940H59A" data-name="IBM AI Developer" data-badge-png="ibm-ai-developer-professional-certificate.png">
+                                <span class="cert-badge">Professional</span>
+                                <img src="static/img/certificates/Professional2.png" alt="IBM AI Developer Professional Certificate" loading="lazy">
+                            </div>
+                            <div class="cert-slide" data-type="Specialization" data-provider="Coursera by IBM" data-link="https://coursera.org/verify/specialization/NM0V4J7OQXKH" data-name="Data Analysis &amp; Visualization Foundations">
+                                <span class="cert-badge">Specialization</span>
+                                <img src="static/img/certificates/Specialization2.png" alt="Data Analysis and Visualization Foundations" loading="lazy">
+                            </div>
+                            <div class="cert-slide" data-type="Specialization" data-provider="Coursera by University of Michigan" data-link="https://coursera.org/verify/specialization/5TD3KF9CAGY7" data-name="Python for Everybody">
+                                <span class="cert-badge">Specialization</span>
+                                <img src="static/img/certificates/Specialization3.png" alt="Python for Everybody Specialization" loading="lazy">
+                            </div>
+                            <div class="cert-slide" data-type="Training Certificate" data-provider="YouView Company LTD" data-link="https://youview.uk/en/verifier-lauthenticite-dun-certificat/" data-name="Data Analytics Training">
+                                <span class="cert-badge">Training</span>
+                                <img src="static/img/certificates/TrainingCert1.png" alt="Data Analytics Training Certificate" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="cert-nav-controls">
+                            <button class="cert-nav" id="certPrev" aria-label="Previous certificate">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                            </button>
+                            <div class="cert-dots" id="certDots"></div>
+                            <button class="cert-nav" id="certNext" aria-label="Next certificate">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+                            </button>
+                        </div>
+                        <div class="cert-bottom-bar">
+                            <span class="cert-current-name" id="certName">Google Data Analytics</span>
+                            <a class="btn btn-small" id="certLink" href="https://coursera.org/verify/professional-cert/VKX3MZF9XGZ4" target="_blank" rel="noopener noreferrer"><span>View Credential ↗</span></a>
+                        </div>
+                        <p class="cert-hint">Click a side certificate, swipe, scroll or use the arrow keys</p>
+                    </div>
+
+                    <div class="cert-info cert-info-right">
+                        <div class="badge-display" id="badgeDisplay">
+                            <img class="cert-badge-png" id="badgeImg" alt="Certificate badge" hidden>
+                            <svg class="badge-fallback" id="badgeFallback" viewBox="0 0 100 100" aria-hidden="true"><use href="#ev-flower"/></svg>
+                        </div>
+                        <span class="cert-info-label">Issued By</span>
+                        <h3 class="cert-provider-text" id="certProvider">Coursera by Google</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CONTACT ═══════════ -->
+        <section id="contact" class="section">
+            <div class="container">
+                <header class="section-head" data-num="VI" data-animate>
+                    <span class="chapter">Reach out</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                </header>
+                <div class="contact-grid">
+                    <div class="contact-info" data-animate>
+                        <h3>Let's talk about everything!</h3>
+                        <p>Don't like forms? Send me an email. Whatever works best for you!</p>
+                        <div class="contact-methods">
+                            <a href="mailto:cuetokenneth31@gmail.com" class="contact-method"><span class="contact-label">Email</span><span class="contact-value">cuetokenneth31@gmail.com</span></a>
+                            <a href="tel:+639984264361" class="contact-method"><span class="contact-label">Phone</span><span class="contact-value">+63 998 426 4361</span></a>
+                            <!-- TODO: replace with your real LinkedIn / GitHub profile URLs -->
+                            <a href="#" class="contact-method"><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/yourprofile</span></a>
+                            <a href="#" class="contact-method"><span class="contact-label">GitHub</span><span class="contact-value">github.com/yourprofile</span></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" data-animate novalidate>
+                        <!-- Web3Forms: replace with your own access key from https://web3forms.com -->
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                        <input type="hidden" name="subject" value="New message from your portfolio">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="field"><input type="text" id="f-name" name="name" placeholder=" " required><label for="f-name">Your name</label></div>
+                        <div class="field"><input type="email" id="f-email" name="email" placeholder=" " required><label for="f-email">Your email</label></div>
+                        <div class="field"><textarea id="f-msg" name="message" rows="5" placeholder=" " required></textarea><label for="f-msg">Your message</label></div>
+                        <button type="submit" class="btn btn-primary magnetic"><span>Send Message</span></button>
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <svg class="footer-flower" viewBox="-50 -50 100 100" aria-hidden="true">
+            <g fill="none" stroke="#C8203F" stroke-width=".6">
+                <path pathLength="1" transform="rotate(45)" d="M0 -4 C 14 -14, 18 -34, 0 -47 C -18 -34, -14 -14, 0 -4 Z"/>
+                <path pathLength="1" transform="rotate(135)" d="M0 -4 C 14 -14, 18 -34, 0 -47 C -18 -34, -14 -14, 0 -4 Z"/>
+                <path pathLength="1" transform="rotate(225)" d="M0 -4 C 14 -14, 18 -34, 0 -47 C -18 -34, -14 -14, 0 -4 Z"/>
+                <path pathLength="1" transform="rotate(315)" d="M0 -4 C 14 -14, 18 -34, 0 -47 C -18 -34, -14 -14, 0 -4 Z"/>
+            </g>
+            <circle pathLength="1" r="8.5" fill="none" stroke="#FF8FB8" stroke-width=".6"/>
+        </svg>
+        <p class="footer-quote">Even the longest night keeps its stars.</p>
+        <p>© 2026 Kenneth Cueto. All rights reserved.</p>
+        <p class="footer-hint">Press <kbd>Ctrl</kbd> + <kbd>`</kbd> for the terminal</p>
+    </footer>
+
+    <!-- ═══════════ PROJECT CASE FILE MODAL ═══════════ -->
+    <div class="modal-overlay" id="projectModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <svg class="modal-watermark" viewBox="0 0 100 100" aria-hidden="true"><use href="#ev-flower-line"/></svg>
+            <button class="modal-close" id="modalClose" aria-label="Close case file">&times;</button>
+            <header class="modal-head">
+                <div class="modal-emblem"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#ev-flower-line"/></svg><span id="modalGlyph"></span></div>
+                <div>
+                    <div class="modal-meta"><span class="cat-tag" id="modalCategory"></span><span class="status-pill" id="modalStatus"></span></div>
+                    <h3 class="modal-title" id="modalTitle"></h3>
+                    <p class="modal-pitch" id="modalPitch"></p>
+                </div>
+            </header>
+            <div class="modal-tabs" role="tablist" id="modalTabs">
+                <button role="tab" class="mtab active" data-tab="overview" aria-selected="true">Overview</button>
+                <button role="tab" class="mtab" data-tab="architecture" aria-selected="false">Architecture</button>
+                <button role="tab" class="mtab" data-tab="stack" aria-selected="false">Tech Stack</button>
+                <button role="tab" class="mtab" data-tab="demo" aria-selected="false">Concept Demo</button>
+                <button role="tab" class="mtab" data-tab="timeline" aria-selected="false">Timeline</button>
+                <span class="mtab-indicator" id="mtabIndicator" aria-hidden="true"></span>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <footer class="modal-foot" id="modalFoot"></footer>
+        </div>
+    </div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Terminal -->
+    <button class="terminal-toggle" id="terminalToggle" aria-label="Toggle terminal">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+    </button>
+    <div class="kc-terminal" id="kcTerminal" role="dialog" aria-label="Portfolio terminal">
+        <div class="kc-terminal-header">
+            <div class="kc-terminal-dots"><span></span><span></span><span></span></div>
+            <span class="kc-terminal-title">kenneth@evernight:~</span>
+            <button class="kc-terminal-close" id="terminalClose" aria-label="Close terminal">&times;</button>
+        </div>
+        <div class="kc-terminal-body" id="terminalBody">
+            <div id="terminalOutput"></div>
+            <div class="kc-terminal-input-line">
+                <span class="kc-terminal-prompt">visitor@evernight:~$&nbsp;</span>
+                <input type="text" class="kc-terminal-input" id="terminalInput" spellcheck="false" autocomplete="off" aria-label="Terminal input">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="projects.js"></script>
+    <script src="viz.js"></script>
+    <script src="scenes3d.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
